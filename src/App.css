@@ -2,13 +2,13 @@
 
 @media screen and (min-width: 900px) {
   body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5; 
-    
+    background-color: #f5f5f5;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
   }
 
 
@@ -82,16 +82,10 @@
 
   /* VISUAL2 */
   .visual2 {
-    width: 1360px;
-    height: 610px;
-    background-color: #fff;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    overflow-y: auto;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    flex-direction: row; /* layout horizontal */
+    width: 100vw;
+    height: 100vh;
     animation: fadeInUp 0.8s ease-out both;
   }
 
@@ -152,16 +146,18 @@
   }
 
   .barraestados {
-    height: 60px;
-    background-color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center; 
-    border-top: 1px solid #ddd;
-    width: 100%;
     position: fixed;
-    bottom: 0;
     left: 0;
+    top: 0;
+    width: 250px; /* ancho fijo de la barra lateral */
+    height: 100vh;
+    background-color: #ffffff;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20px;
     z-index: 100;
   }
 
@@ -184,6 +180,29 @@
     transform: translate(-50%, -50%);
     z-index: 200;
     overflow: hidden;
+  }
+
+    /* Zona de publicaciones */
+  .publicaciones {
+    flex: 1;
+    margin-left: 250px; /* espacio para la barra lateral */
+    padding: 20px;
+    overflow-y: auto; /* scroll solo en publicaciones */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Cada publicación */
+  .publicacion {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px; /* ancho máximo de cada post */
+    margin-top: 20px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   }
 }
 
