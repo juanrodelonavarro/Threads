@@ -114,7 +114,7 @@ function Visual2() {
 
             {/* Renderizado dinámico de posts */}
 
-            <main>
+            <main className='listatwittes'>
 
                 {posts.map((post, index) => (
                     <div className='twittes' key={index}>
